@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Esendex.TokenBucket
+namespace StEn.TokenBucket
 {
     /// <summary>
     /// A token bucket implementation that is of a leaky bucket in the sense that it has a finite capacity and any added
@@ -31,6 +31,18 @@ namespace Esendex.TokenBucket
             _refillStrategy = refillStrategy;
             _sleepStrategy = sleepStrategy;
             _size = 0;
+        }
+
+        /// <summary>
+        /// Retrieves the current amount of token available
+        /// </summary>
+        /// <returns>Number of token</returns>
+        public long GetSize()
+        {
+            lock (_syncRoot)
+            {
+                return _size;
+            }
         }
 
         /// <summary>
