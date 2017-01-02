@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using StEn.TokenBucket;
 
 namespace Esendex.TokenBucket.Tests
 {

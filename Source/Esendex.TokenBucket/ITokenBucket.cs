@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Esendex.TokenBucket
+namespace StEn.TokenBucket
 {
     /// <summary>
     /// A token bucket is used for rate limiting access to a portion of code.
@@ -10,6 +10,12 @@ namespace Esendex.TokenBucket
     /// </summary>
     public interface ITokenBucket
     {
+        /// <summary>
+        /// Retrieves the current amount of token available
+        /// </summary>
+        /// <returns>Number of token</returns>
+        long GetSize();
+
         /// <summary>
         /// Attempt to consume a single token from the bucket.  If it was consumed then <code>true</code>
         /// is returned, otherwise <code>false</code> is returned.

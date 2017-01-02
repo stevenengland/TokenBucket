@@ -1,6 +1,6 @@
 using System;
 
-namespace Esendex.TokenBucket
+namespace StEn.TokenBucket
 {
     public abstract class Ticker
     {

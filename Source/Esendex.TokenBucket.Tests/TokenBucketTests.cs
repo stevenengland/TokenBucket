@@ -1,6 +1,7 @@
 using System;
 using Moq;
 using NUnit.Framework;
+using StEn.TokenBucket;
 
 namespace Esendex.TokenBucket.Tests
 {
@@ -18,7 +19,7 @@ namespace Esendex.TokenBucket.Tests
         {
             _refillStrategy = new MockRefillStrategy();
             _sleepStrategy = new Mock<ISleepStrategy>();
-            _bucket = new TokenBucket(Capacity, _refillStrategy, _sleepStrategy.Object);
+            _bucket = new StEn.TokenBucket.TokenBucket(Capacity, _refillStrategy, _sleepStrategy.Object);
         }
 
         [Test, ExpectedException(typeof (ArgumentOutOfRangeException))]

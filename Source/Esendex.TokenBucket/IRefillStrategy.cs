@@ -1,4 +1,4 @@
-namespace Esendex.TokenBucket
+namespace StEn.TokenBucket
 {
     /// <summary>
     /// Encapsulation of a refilling strategy for a token bucket.

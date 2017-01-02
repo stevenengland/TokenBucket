@@ -1,4 +1,4 @@
-namespace Esendex.TokenBucket
+namespace StEn.TokenBucket
 {
     /// <summary>
     /// Encapsulation of a strategy for relinquishing control of the CPU.
